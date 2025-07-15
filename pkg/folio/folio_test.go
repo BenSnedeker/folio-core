@@ -1,6 +1,8 @@
 package folio
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestFolioCreation(t *testing.T) {
 	f := Folio{
