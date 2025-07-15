@@ -21,15 +21,18 @@ type Node struct {
 }
 
 type Folio struct {
+	// Meta
+	ID            string    `json:"id"`
 	SchemaVersion string    `json:"schema_version"`
 	Name          string    `json:"name"`
 	Created       time.Time `json:"created"`
 	LastModified  time.Time `json:"last_modified"`
-	Sources       []Node    `json:"sources,omitempty"`
-	Cores         []Node    `json:"cores,omitempty"`
-	Questions     []Node    `json:"questions,omitempty"`
-	Notes         []Node    `json:"notes,omitempty"`
-	Tasks         []Node    `json:"tasks,omitempty"`
-	Dailies       []Node    `json:"dailies,omitempty"`
-	Ghosts        []Node    `json:"ghosts,omitempty"`
+	// Content
+	Sources   []Node `json:"sources,omitempty"`
+	Cores     []Node `json:"cores,omitempty"`
+	Questions []Node `json:"questions,omitempty"`
+	Notes     []Node `json:"notes,omitempty"`
+	Tasks     []Node `json:"tasks,omitempty"`
+	Dailies   []Node `json:"dailies,omitempty"`
+	Ghosts    []Node `json:"ghosts,omitempty"`
 }
